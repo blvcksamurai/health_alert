@@ -4,7 +4,11 @@ class Constants {
   // Constant Color
   static const Color darkGreen = Color(0xFF096050);
   static const Color lightGreen = Color(0xFF36F5D3);
-  static const Color subGreen = Color(0xFFE8F5FF);
+  static const Color boxGreen = Color(0xff3A4947);
+  static const Color editorBg = Color(0xffEDECF4);
+
+  // EDECF4
+  static const Color subGreen = Color(0xFF859E9B);
   static const Color bgDark = Color(0xFF000000);
   static const Color bgLight = Color(0xFFFFFFFF);
   static const Color errorColor = Color(0xFFEB5858);

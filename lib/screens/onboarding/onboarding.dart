@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:health_alert/data/onboarding_model.dart';
-import 'package:health_alert/screens/welcome_screen.dart';
+import 'package:health_alert/screens/onboarding/welcome_screen.dart';
 import 'package:health_alert/utils/constants.dart';
 
 class Onboarding extends StatefulWidget {
@@ -126,7 +126,7 @@ class _OnboardingState extends State<Onboarding> {
                 onPressed: () {
                   if (currentIndex == contents.length - 1) {
                     {
-                      Navigator.push(context,
+                      Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (_) => WelcomeScreen()));
                     }
                     _controller?.nextPage(

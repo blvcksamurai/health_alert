@@ -1,10 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:health_alert/screens/home_screen.dart';
+import 'package:health_alert/screens/authScreens/login_screen.dart';
 import 'package:health_alert/utils/constants.dart';
-
-import '../widgets/CustomButton.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -57,14 +55,24 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8)),
                     ),
-                    child: InkWell(
-                        onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => HomeScreen()));
-                        },
-                        child: CustomButton(
-                          text: 'Get Started',
-                        )),
+                    child: TextButton(
+                      child: Text(
+                        'Get Started',
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => LoginScreen(),
+                          ),
+                        );
+                      },
+                    ),
                   )
                 ],
               ),
